@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.uberclone.uber.CustommerCall">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/map_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/map"
+        android:layout_centerInParent="true"
+        app:civ_border_color="@android:color/holo_green_dark"
+        app:civ_border_width="5dp" />
+    <LinearLayout
+        android:layout_below="@id/map_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:text="Time"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_time"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:text="Distance"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_distance"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:text="Address"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_address"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_above="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginRight="6dp"
+            android:id="@+id/btnAccept"
+            android:textColor="@color/colorPrimary"
+            android:text="Accept"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_sign_in_background"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginLeft="6dp"
+            android:id="@+id/btnDecline"
+            android:textColor="@color/btn_register"
+            android:text="Decline"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_register_background"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
